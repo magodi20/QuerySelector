@@ -1,0 +1,1 @@
+let newQuote = document.getElementById('new-quote');
