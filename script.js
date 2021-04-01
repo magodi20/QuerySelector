@@ -1,1 +1,1 @@
-let newQuote = document.getElementById('new-quote');
+let newQuoteButton = document.getElementById('new-quote');
