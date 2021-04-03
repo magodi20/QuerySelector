@@ -1,10 +1,12 @@
 let newQuoteButton = document.getElementById('new-quote');
 let text = document.getElementById('text');
 let author = document.getElementById('author');
+let tweetQuotelink = document.getElementById('tweet-quote');
 
 newQuoteButton.addEventListener('click', (e) => {
     addNewQuote();
 })
+
 
 
 
@@ -24,6 +26,7 @@ function addNewQuote() {
         .then(function (response) {
             text.innerHTML = response.quotes[0].text;
             author.innerHTML = response.quotes[0].author;
+            tweetQuotelink.href = `https://twitter.com/intent/tweet?text=${encodeURI(`"${text.innerHTML}" - ${author.innerHTML}`)}`
 
 
         })
